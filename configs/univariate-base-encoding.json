@@ -1,0 +1,48 @@
+{
+  "encoder_config": {
+    "row_wise_ff_num_layers": 2,
+    "num_heads": 12,
+    "num_layers": 4,
+    "d_model": 384,
+    "m_inducing_points": 64,
+    "dropout_rate": 0.1
+  },
+  "decoder_config": {
+    "__class__": "decoder_with_regression_config",
+    "d_model": 576,
+    "num_heads": 12,
+    "d_ff": 2048,
+    "num_layers": 4,
+    "max_len": 50,
+    "mode":"concat"
+  },
+  "loss":"huber",
+  "reg_head_num_layers": 2,
+  "reg_head_dim": 64,
+  "dataset_config": {
+    "num_of_not_seen": 3,
+    "batch_size": 256,
+    "sample_points": false,
+    "test_size": 10000,
+    "dataset_size": 130000000,
+    "variables": ["x"],
+    "num_points": 100,
+    "extended_representation": false
+  },
+  "max_epoch": 390,
+  "input_regularizer": "random_noise_regularizer()",
+  "callback_config": {
+    "greedy_search": {
+      "max_num": 128,
+      "evaluate_each": 0
+    },
+    "beam_search": {
+      "max_num": 32,
+      "evaluate_each": 30,
+      "beam_width": 256
+    },
+    "regression_delay": 100
+  },
+  "regression_lambda": 0.0,
+  "label_smoothing": 0.1
+}
