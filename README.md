@@ -3,7 +3,8 @@
 This repository contains the official implementation of SymFormer. It is a symbolic regression method that uses a
 transformer model to generate a symbolic representation of a function based on the function's output.
 
-[Paper](https://arxiv.org/pdf/....pdf)&nbsp;&nbsp;&nbsp; [Web](https://vastlik.github.io/symformer/)&nbsp;&nbsp;&nbsp;
+[Paper](https://arxiv.org/pdf/2205.15764)&nbsp;&nbsp;&nbsp;
+[Web](https://vastlik.github.io/symformer/)&nbsp;&nbsp;&nbsp;
 [Demo](https://colab.research.google.com/github/vastlik/symformer/blob/main/notebooks/symformer-playground.ipynb)
 
 <br>
